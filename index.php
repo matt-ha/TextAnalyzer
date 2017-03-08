@@ -16,6 +16,8 @@ require_once 'APICall.php';
   <body>
     <form action="" method="POST">
       <h1>Type in your sentence!</h1>
+	  <h2>Some Test Code!</h2>
+	  <h3>code that will not be commited</h3>
       <div class="form-group">
         <input type="textarea" name="Text" size="50"></input>
       </div>
