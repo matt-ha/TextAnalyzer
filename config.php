@@ -9,7 +9,7 @@ class Configuration {
 
   public function __construct() {
     $this->endpoint = 'https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment';
-    $this->apiKey = 'getenv('app_pass')';
+    $this->apiKey = getenv('app_pass');
 
   }
 
