@@ -32,6 +32,19 @@ require_once 'APICall.php';
       echo '</p>';
     } ?>
 
+    <table>
+      <tr>
+        <th>Text</th>
+        <th>Score</th>
+      </tr>
+      <?php foreach($scoreResults as $s) { ?>
+        <tr>
+          <td><?php echo $s['text']; ?></td>
+          <td><?php echo $s['score']; ?></td>
+        </tr>
+      <?php } ?>
+    </table>
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 

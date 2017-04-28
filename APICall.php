@@ -1,6 +1,7 @@
 <?php
 require_once 'config.php';
 require_once 'documents.php';
+require_once 'connect.php';
 
 $configuration = new Configuration();
 
@@ -11,8 +12,29 @@ if (isset($_POST['Text'])) {
   $text1 = $_POST['Text'];
   if ($text1 != "") {
     $output = makeAPICall($text1, $configuration);
+
+    $output_array = json_decode($output, true);
+    $value = number_format($output_array['documents'][0]['score'] * 100, 2);
+    $sql = "insert into text_results set text='$text1', score=$value";
+    // echo $sql;
+    $conn->query($sql);
   }
+
 }
+
+$sql2 = "select text, score from text_results";
+$result = $conn->query($sql2);
+$scoreResults = array();
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+      array_push($scoreResults, $row);
+    }
+} else {
+    echo "0 results";
+}
+
+$conn->close();
 
 // echo $text;
 // die();
