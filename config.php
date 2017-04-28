@@ -1,6 +1,6 @@
 <?php
 
-$ini = parse_ini_file('/vendor/test/config.ini');
+$ini = parse_ini_file('vendor\test\config.ini');
 
 class Configuration {
 
