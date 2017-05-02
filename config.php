@@ -1,7 +1,7 @@
 <?php
-require_once getcwd() . '/vendor/autoload.php';
-$ini = parse_ini_file('vendor/test/config.ini');
-$key = $ini['app_pass'];
+// require_once getcwd() . '/vendor/autoload.php';
+// $ini = parse_ini_file('vendor/test/config.ini');
+// $key = $ini['app_pass'];
 
 class Configuration {
 
@@ -12,7 +12,7 @@ class Configuration {
 
     global $key;
     $this->endpoint = 'https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment';
-    $this->apiKey = $key;
+    $this->apiKey = '51a9e2c2b75e477ca2d6e8e6263c23cc';
 
   }
 
