@@ -1,7 +1,7 @@
 <?php
 require_once getcwd() . '/vendor/autoload.php';
-$ini = parse_ini_file('C:/xampp/htdocs/vendor/test/config.ini');
-$key = ($ini['app_pass']);
+// $ini = parse_ini_file('C:/xampp/htdocs/vendor/test/config.ini');
+// $key = ($ini['app_pass']);
 
 class Configuration {
 
