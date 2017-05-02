@@ -1,5 +1,5 @@
 <?php
-require_once getcwd() . '/vendor/autoload.php';
+// require_once getcwd() . '/vendor/autoload.php';
 // $ini = parse_ini_file('vendor/test/config.ini');
 // $key = ($ini['app_pass']);
 
